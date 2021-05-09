@@ -1,1 +1,17 @@
-<p>contacto lo que escrible!</p>
+
+ <div *ngFor="let item of contact.messages"> 
+    {{ item }}
+</div>
+
+<!-- {{ contact | json }} -->
+
+
+
+
+
+<!-- <form>  
+    <input name="mensaje" [formControl]="mensaje" (keypress)="sendEnter($event)" >
+    <button type="button" (click)="send()">Enviar</button>
+    
+        <div *ngIf="mensaje.hasError('required')">Requerido</div>
+    </form>-->

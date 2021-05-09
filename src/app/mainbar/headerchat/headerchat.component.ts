@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ChatService } from 'src/app/chat.service';
 
 @Component({
   selector: 'app-headerchat',
@@ -7,9 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderchatComponent implements OnInit {
 
-  constructor() { }
+  photo = '';
+  name = '';
+
+  constructor(private service: ChatService) { }
 
   ngOnInit(): void {
+    this.service.showContact.subscribe(val => {
+      console.log(val);
+      this.name = val.name;
+      this.photo = val.photo;
+    });
   }
 
 }

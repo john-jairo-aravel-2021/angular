@@ -1,5 +1,39 @@
-<p>Liata de contactos!</p>
-<!-- <div class="corilalis" *ngFor="let item of list">  -->
+<!-- {{list}}  -->
+<!-- list se cambia por el noimbre que se quiere iterar, es el nombre del arreglo creado -->
+<!-- {{ fecha.getDay() }}/{{ fecha.getMonth() }}/{{ fecha.getFullYear() }} {{ fecha.getHours() }}:{{ fecha.getMinutes() }}:{{ fecha.getSeconds() }} angular reemplaza todo por el siguiente codigo-->
+
+<!-- {{ fecha | date: 'dd/MM/YYYY hh:mm:ss aa' }} -->
+<!-- {{ fecha | date: 'short' }} -->
+<!-- {{ fecha | date: 'long' }} -->
+
+
+
+<!-- {{ fecha.getFullYear() }} -->
+<!-- {{ fecha.getDay() }} -->
+<!-- {{ today }}  -->
+<div class="contact" *ngFor="let contact of list" (click)="showChats(contact)">
+     <img [src]="'https://ui-avatars.com/api/?background=random&size=200&bold=true&uppercase=true&name=' + contact.name" [title]="contact.lastMessage">
+     {{contact.name}}
+     
+
+     <!-- <div *ngIf="checkToday(contact.lastDate)" style="color: blue;"> -->
+     <!-- {{ contact.lastDate | date: 'hh:mm aa' }}
+     </div>
+     <div *ngIf="checkYesterday(contact.lastDate)" style="color: rgb(255, 0, 0);">
+          Ayer
+     </div>
+     <div *ngIf="checkOther(contact.lastDate)" style="color: darkgoldenrod;"> -->
+          <!-- pendiente de hacer proceso para colocar fechas anteropres -->
+     <!-- </div> -->
+
+
+     <!-- {{ contact.name }} -->
+      <!-- {{ contact.lastDate }}   -->
+     <!-- <div *ngIf="contact.name === 'John'">Conectado</div> -->
+
+</div>
+
+<!-- <div class="contact" *ngFor="let item of list">  -->
      <!-- <ing [src]="contac.photo">  -->
 
 <!-- </div>  -->

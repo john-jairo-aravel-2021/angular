@@ -1,1 +1,13 @@
-<p>escribiendo mensaje!</p>
+<form>
+    <input class="input" name="mensaje" [formControl]="mensaje" (keypress)="sendEnter($event)" >
+    <!-- <button type="button" (click)="send()">Enviar</button> -->
+    
+        <!-- <div *ngIf="mensaje.hasError('required')">Requerido</div> -->
+</form>
+<!-- <input name="mensaje" [formControl]="mensaje" (keypress)="sendEnter($event)" > -->
+<!-- <button type="button" (click)="send()">Enviar</button> -->
+
+<!-- <form> -->
+    <!-- <input name="mensaje" [formControl]="mensaje"  > -->
+    
+<!-- </form> -->
